@@ -4,8 +4,8 @@ from collections import deque
 class Stack:
 
     #1 задание
-    def __init__(self, my_stack):
-        self.stack = my_stack
+    def __init__(self, my_stack: list):
+        self.stack = deque(my_stack)
 
     def isEmpty(self):
         if len(self.stack) == 0:
@@ -49,7 +49,7 @@ class Stack:
 
 
 if __name__ == "__main__":
-    run = Stack(my_stack=deque([['o', 'p', 'q'], 'abc', 2, 3, 'a']))
+    run = Stack(my_stack=[['o', 'p', 'q'], 'abc', 2, 3, 'a'])
     run.isEmpty()
     run.push("qwerty")
     run.pop()
